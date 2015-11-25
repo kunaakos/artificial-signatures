@@ -100,7 +100,6 @@ var setTemplate = function (templateName) {
 			ctxt.divisionID = formData.division;
 			ctxt.divisionColor = getDivisionColor(formData.division);
 			ctxt.phone = (formData.phone && formData.phone != '           ') ? formData.phone : null;
-			console.log('|' + ctxt.phone + '|');
 			return {
 				context: ctxt,
 				division: formData.division
@@ -110,11 +109,13 @@ var setTemplate = function (templateName) {
 		// http://stackoverflow.com/a/22085875
 		downloadSignatureHtml = function (filename) {
 	    var elHtml = $('#target').html();
-	    var link = document.createElement('a');
-	    link.setAttribute('download', filename);
-	    link.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(elHtml));
-	    link.click();
+	    var link = $('#hidden-link');
+	    link.attr('download', filename);
+	    link.attr('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(elHtml));
+			$('#hidden-link').click();
 		};
+
+
 
 // start
 $("#title").fitText(1.3);
