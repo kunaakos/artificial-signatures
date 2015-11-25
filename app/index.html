@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Signatures</title>
+    <!-- build:css css/libraries.min.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild -->
+    <!-- build:js js/vendor/modernizr.min.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div class="row top-half">
+      <div class="small-11 large-8 columns small-centered text-center"><h1 id="title">Artificial Signatures</h1></div>
+      <div class="small-11 large-8 columns small-centered">
+        <form id="employee-data">
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Neved
+                <input type="text" name="name" placeholder="" required/>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Reszleg
+                <select id="division-select" name="division">
+                  <option value="group">Group</option>
+                  <option value="boutique">Boutique</option>
+                  <option value="digital">Digital</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Beosztasod
+                <input type="text" name="position" placeholder="" required/>
+              </label>
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <label>Emailed</label>
+            <div class="small-7 columns">
+              <input type="text" name="email" placeholder="" required/>
+            </div>
+            <div class="small-5 columns">
+              <span id="email-postfix" class="postfix">@artificialgroup.com</span>
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <label>Telefonszamod</label>
+            <div class="small-3 columns">
+              <span class="prefix">+36</span>
+            </div>
+            <div class="small-9 columns">
+              <input type="text" name="phone" placeholder="" required/>
+            </div>
+          </div>
+
+        </form>
+      </div>
+          </div>
+    <div class="row bottom-half">
+      <div id="target" class="small-11 large-8 columns small-centered">
+      </div>
+
+    </div>
+
+    <script id="group-template" type="text/x-handlebars-template">
+      <h3>Data (group)</h3>
+      <p>name: {{name}}</p>
+      <!-- <p>division: {{division}}</p> -->
+      <p>position: {{position}}</p>
+      <p>phone: {{phone}}</p>
+      <p>email: {{email}}</p>
+
+
+    </script>
+    <script id="boutique-template" type="text/x-handlebars-template">
+      <h3>Data (boutique)</h3>
+      <p>name: {{name}}</p>
+      <!-- <p>division: {{division}}</p> -->
+      <p>position: {{position}}</p>
+      <p>phone: {{phone}}</p>
+      <p>email: {{email}}</p>
+    </script><script id="digital-template" type="text/x-handlebars-template">
+      <h3>Data (digital)</h3>
+      <p>name: {{name}}</p>
+      <!-- <p>division: {{division}}</p> -->
+      <p>position: {{position}}</p>
+      <p>phone: {{phone}}</p>
+      <p>email: {{email}}</p>
+    </script>
+
+
+    <!-- build:js js/vendor/libraries.min.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/vendor/foundation.min.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

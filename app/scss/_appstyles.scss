@@ -1,0 +1,24 @@
+/* all app scss styles here */
+
+body {
+  background: #cacaca;
+}
+
+#title {
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  // font-size: 60px;
+  margin-bottom: 40px;
+  margin-top: 25px;
+}
+
+.top-half {
+}
+
+.bottom-half {
+  margin-top: 50px;
+  background: white;
+  padding: 50px 0;
+}
