@@ -1,52 +1,35 @@
 /* all app scss styles here */
 
 body {
-  background: #cacaca;
+  background: #e2e2e2;
 }
 
-.sect-title {
-  background: #f9f9f9;
-
+.chameleon {
+  transition: all 400ms ease-out;
 }
 
 #title {
-  // color: white;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: bold;
-  margin-bottom: 40px;
-  margin-top: 25px;
+  color: white;
+}
+
+.sect-title {
+  padding-bottom: 10px;
+  background: #cacaca;
 }
 
 .sect-form {
-  background: #f9f9f9;
-  padding: 50px 0;
+  background: #cacaca;
+  padding-bottom: 30px;
 }
 
 .sect-signature {
   background: white;
-  padding: 50px 0;
+  padding: 10px 0;
 }
 
-
-// template styles
-#target {
-  .div-boutique {
-    color:  #149c86;
-  }
-
-  .div-craft {
-    color:  #d17f24;
-  }
-
-  .div-event {
-    color:  #3a7fb6;
-  }
-
-  .div-digital {
-    color:  #da5340;
-  }
-  p {
-    margin:0;
-  }
+label {
+  color: white;
 }

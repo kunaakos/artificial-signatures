@@ -1,5 +1,6 @@
 var template = null,
-		currentDivision = null;
+		currentDivision = null,
+		userName = null;
 
 var domainNames = {
 			boutique: "www.artificialgroup.com",
@@ -72,9 +73,15 @@ var setTemplate = function (templateName) {
 			return formData;
 		},
 
+		setFormColor = function (color) {
+			$('.chameleon').css('background-color', color);
+		}
+
+
 		// change template based on current division, render template
 		renderTemplate = function (pData) {
 			setDivision(pData.division);
+			setFormColor(getDivisionColor(pData.division));
 			template = setTemplate(pData.division);
 			var html = template(pData.context);
 			window.requestAnimationFrame(function(){
@@ -86,12 +93,14 @@ var setTemplate = function (templateName) {
 		processFormData =  function (formData) {
 			var ctxt = {};
 			ctxt.name = formData.name;
+			userName = formData.name;
 			ctxt.position = formData.position;
 			ctxt.siteUrl = getDomainName(formData.division);
 			ctxt.divisionName = getDivisionName(formData.division);
 			ctxt.divisionID = formData.division;
 			ctxt.divisionColor = getDivisionColor(formData.division);
-			ctxt.phone = formData.phone ? '+36 ' + formData.phone : null;
+			ctxt.phone = (formData.phone && formData.phone != '           ') ? formData.phone : null;
+			console.log('|' + ctxt.phone + '|');
 			return {
 				context: ctxt,
 				division: formData.division
@@ -99,16 +108,17 @@ var setTemplate = function (templateName) {
 		},
 
 		// http://stackoverflow.com/a/22085875
-		downloadSignatureHtml = function (filename, elId, mimeType) {
-	    var elHtml = $(elId).html();
+		downloadSignatureHtml = function (filename) {
+	    var elHtml = $('#target').html();
 	    var link = document.createElement('a');
-	    mimeType = mimeType || 'text/plain';
 	    link.setAttribute('download', filename);
-	    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+	    link.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(elHtml));
 	    link.click();
 		};
 
 // start
+$("#title").fitText(1.3);
+$("#phone-input").mask("99 999 9999",{placeholder:" ", autoclear: false});
 $(document).foundation();
 updateForm();
 
@@ -119,7 +129,12 @@ $('input').on('keyup', function() {
 
 // save sig
 $('#btn-save').on('click', function() {
-	downloadSignatureHtml('signature.html', '#target', 'text/html');
+	if (userName) {
+		var today = new Date();
+		downloadSignatureHtml(userName.replace(/\s+/g, '') +'-sig-' + today.getDate() + '_' + (today.getMonth() + 1) + '_' + today.getFullYear() + '.html');
+	} else {
+		alert('Ne felejtsd el kitölteni!');
+	}
 });
 
 // change template, email, etc. after a new division is selected
@@ -127,3 +142,10 @@ $("#division-select").on('change', function() {
 	setDivision(this.value);
 	updateForm();
 });
+
+// $("#phone-input").on('keyup', function() {
+// 	var number = $(this).val();
+//   number = number.replace(/\s+/g, '').replace(/(\d{2})(\d{3})(\d{4})/, "$1 $2 $3");
+//   $(this).val(number);
+// 	updateForm();
+// });

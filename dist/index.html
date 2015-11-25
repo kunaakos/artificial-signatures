@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Signatures</title>
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/vendor/modernizr.min.js"></script>
+  </head>
+  <body>
+    <div class="row sect-title">
+      <div class="small-11 large-8 columns small-centered text-center"><h1 id="title">Artificial Signatures</h1></div>
+    </div>
+
+    <div class="row sect-form">
+      <div class="small-11 large-8 columns small-centered">
+        <form id="employee-data">
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Neved
+                <input type="text" name="name" placeholder="" required/>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Reszleg
+                <select id="division-select" name="division">
+                  <option value="boutique">Boutique Creative</option>
+                  <option value="craft">Craft Division</option>
+                  <option value="event">Event Division</option>
+                  <option value="digital">Digital Division</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Beosztasod
+                <input type="text" name="position" placeholder="" required/>
+              </label>
+            </div>
+          </div>
+
+          <!-- <div class="row collapse">
+            <label>Emailed</label>
+            <div class="small-7 columns">
+              <input type="text" name="email" placeholder="" required/>
+            </div>
+            <div class="small-5 columns">
+              <span id="email-postfix" class="postfix">@artificialgroup.com</span>
+            </div>
+          </div> -->
+
+          <div class="row collapse">
+            <label>Telefonszamod</label>
+            <div class="small-3 columns">
+              <span class="prefix">+36</span>
+            </div>
+            <div class="small-9 columns">
+              <input type="text" name="phone" placeholder="" required/>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="row sect-signature">
+      <div id="target" class="small-11 large-8 columns small-centered">
+      </div>
+    </div>
+    <div class="row sect-controls">
+      <div class="small-2 columnst">
+
+      </div>
+      <a id="btn-save" class="success button right" href="#">Ez tetszik, lementem!</a>
+    </div>
+
+    <script id="template" type="text/x-handlebars-template">
+      <br />
+      <br />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      <table width='480' cellspacing='0' cellpadding='0' border-spacing='0' style="width:480px;margin:0;padding:0;font-family:'Helvetica',sans-serif;border-collapse:collapse;">
+        <tbody>
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;">
+              <strong>{{name}}</strong>
+            </td>
+          </tr>
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;">
+              {{position}}
+            </td>
+          </tr>
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
+              <span style="color:{{divisionColor}};">Artificial Group//{{divisionName}}</span>
+            </td>
+          </tr>
+          {{#if phone}}
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
+              {{phone}}
+            </td>
+          </tr>
+          {{/if}}
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;">
+              <a style="color:#3c3c3c;" href="http://{{siteUrl}}">{{siteUrl}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;">
+              Budapest, 1053 Veres Pálné utca 9.
+            </td>
+          </tr>
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0; padding-top:6px;">
+              <img src="http://www.artificialdigital.com/email/artificial-sig-{{divisionID}}.jpg" width="480" height="64" alt="">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      &nbsp;
+    </script>
+
+    <script src="js/vendor/libraries.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

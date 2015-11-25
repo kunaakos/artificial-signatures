@@ -1,61 +1,65 @@
 <!doctype html>
-<html class="no-js" lang="en" >
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artificial Signatures</title>
-    <!-- build:css css/libraries.min.css -->
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css css/app.min.css -->
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/app_override.css">
-    <!-- endbuild -->
-    <!-- build:js js/vendor/modernizr.min.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    <div class="row sect-title">
-      <div class="small-11 large-8 columns small-centered text-center"><h1 id="title">Artificial Signatures</h1></div>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Signatures</title>
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app_override.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="row chameleon sect-title">
+    <div class="small-12 columns small-centered text-center">
+      <h1 id="title">Artificial&nbsp;Signatures</h1>
     </div>
+  </div>
 
-    <div class="row sect-form">
-      <div class="small-11 large-8 columns small-centered">
-        <form id="employee-data">
+  <div class="row chameleon sect-form">
+    <div class="small-11 large-8 columns small-centered">
+      <form id="employee-data">
 
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Neved
-                <input type="text" name="name" placeholder="" required/>
-              </label>
-            </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Neved
+              <input type="text" name="name" placeholder="" required/>
+            </label>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Reszleg
-                <select id="division-select" name="division">
-                  <option value="boutique">Boutique Creative</option>
-                  <option value="craft">Craft Division</option>
-                  <option value="event">Event Division</option>
-                  <option value="digital">Digital Division</option>
-                </select>
-              </label>
-            </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Részleg ahol dolgozol
+              <select id="division-select" name="division">
+                <option value="boutique">Boutique Creative</option>
+                <option value="craft">Craft Division</option>
+                <option value="event">Event Division</option>
+                <option value="digital">Digital Division</option>
+              </select>
+            </label>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Beosztasod
-                <input type="text" name="position" placeholder="" required/>
-              </label>
-            </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Beosztásod
+              <input type="text" name="position" placeholder="" required/>
+            </label>
           </div>
+        </div>
 
-          <!-- <div class="row collapse">
+        <!-- <div class="row collapse">
             <label>Emailed</label>
             <div class="small-7 columns">
               <input type="text" name="email" placeholder="" required/>
@@ -65,110 +69,97 @@
             </div>
           </div> -->
 
-          <div class="row collapse">
-            <label>Telefonszamod</label>
-            <div class="small-3 columns">
-              <span class="prefix">+36</span>
-            </div>
-            <div class="small-9 columns">
-              <input type="text" name="phone" placeholder="" required/>
-            </div>
+        <div class="row collapse">
+          <label>Telefonszámod</label>
+          <div class="small-3 columns">
+            <span class="prefix">+36</span>
           </div>
+          <div class="small-9 columns">
+            <input id="phone-input" type="text" name="phone" placeholder="" required/>
+          </div>
+        </div>
 
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 
-    <div class="row sect-signature">
-      <div id="target" class="small-11 large-8 columns small-centered">
-      </div>
+  <div class="row sect-signature">
+    <div id="target" class="small-11 large-8 columns small-centered">
     </div>
-    <div class="row sect-controls">
-      <div class="small-2 columnst">
+  </div>
+  <div class="row sect-controls">
+    <div class="small-2 columnst">
 
-      </div>
-      <a id="btn-save" class="success button right" href="#">Ez tetszik, lementem!</a>
     </div>
+    <a id="btn-save" class="success button right chameleon" href="#">Ez tetszik, lementem!</a>
+  </div>
 
-    <script id="template" type="text/x-handlebars-template">
-      <br />
-      <br />
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script id="template" type="text/x-handlebars-template">
+    <br />
+    <br />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-      <table width='480' cellspacing='0' cellpadding='0' border-spacing='0' style="width:480px;margin:0;padding:0;font-family:'Helvetica',sans-serif;border-collapse:collapse;">
-        <tbody>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;">
-              <strong>{{name}}</strong>
-            </td>
-          </tr>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;">
-              {{position}}
-            </td>
-          </tr>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
-              <span style="color:{{divisionColor}};">Artificial Group//{{divisionName}}</span>
-            </td>
-          </tr>
-          {{#if phone}}
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
-              {{phone}}
-            </td>
-          </tr>
-          {{/if}}
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;">
-              <a style="color:#3c3c3c;" href="http://{{siteUrl}}">{{siteUrl}}</a>
-            </td>
-          </tr>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;">
-              Budapest, 1053 Veres Pálné utca 9.
-            </td>
-          </tr>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0; padding-top:6px;">
-              <img src="http://www.artificialdigital.com/email/artificial-sig-{{divisionID}}.jpg" width="480" height="64" alt="">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      &nbsp;
-    </script>
+    <table width='480' cellspacing='0' cellpadding='0' border-spacing='0' style="width:480px;margin:0;padding:0;font-family:'Helvetica',sans-serif;border-collapse:collapse;">
+      <tbody>
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;">
+            <strong>{{name}}</strong>
+          </td>
+        </tr>
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;">
+            {{position}}
+          </td>
+        </tr>
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
+            <span style="color:{{divisionColor}};">Artificial Group//{{divisionName}}</span>
+          </td>
+        </tr>
+        {{#if phone}}
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
+            +36 {{phone}}
+          </td>
+        </tr>
+        {{/if}}
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;">
+            <a style="color:#3c3c3c;" href="http://{{siteUrl}}">{{siteUrl}}</a>
+          </td>
+        </tr>
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0;">
+            Budapest, 1053 Veres Pálné utca 9.
+          </td>
+        </tr>
+        <tr>
+          <td width="480" style="width:480px;margin:0;padding:0; padding-top:6px;">
+            <img src="http://www.artificialdigital.com/email/artificial-sig-{{divisionID}}.jpg" width="480" height="64" alt="">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br /> &nbsp;
+  </script>
 
-    <!-- build:js js/vendor/libraries.min.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
-    <script src="bower_components/handlebars/handlebars.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js js/vendor/foundation.min.js -->
-    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
-    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
-    <!-- endbuild -->
-    <!-- build:js js/app.min.js -->
-    <script src="js/app.js"></script>
-    <!-- endbuild -->
-  </body>
+  <!-- build:js js/vendor/libraries.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/FitText.js/jquery.fittext.js"></script>
+  <script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/vendor/foundation.min.js -->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+
+  <!-- endbuild -->
+  <!-- build:js js/app.min.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
 </html>

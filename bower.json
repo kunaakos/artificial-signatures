@@ -3,6 +3,8 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "font-awesome": "~4.4.0",
-    "handlebars": "~4.0.5"
+    "handlebars": "~4.0.5",
+    "FitText.js": "~1.2.0",
+    "jquery.maskedinput": "jquery-maskedinput#~1.4.1"
   }
 }
