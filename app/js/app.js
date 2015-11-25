@@ -15,6 +15,13 @@ var divisionNames = {
 			digital: "Digital Division",
 		};
 
+var divisionColors = {
+			boutique: "#149c86",
+			craft: "#d17f24",
+			event: "#3a7fb6",
+			digital: "#da5340",
+		};
+
 var setTemplate = function (templateName) {
 			var source = $("#template").html();
 			return Handlebars.compile(source);
@@ -35,6 +42,14 @@ var setTemplate = function (templateName) {
 				return null;
 			}
 		},
+
+		getDivisionColor = function (divisionName) {
+			if (divisionColors[divisionName]) {
+				return divisionColors[divisionName]
+			} else {
+				return null;
+			}
+		}
 
 		setDivision = function (divisionName) {
 			$('#email-postfix').html(getDomainName(divisionName));
@@ -75,6 +90,7 @@ var setTemplate = function (templateName) {
 			ctxt.siteUrl = getDomainName(formData.division);
 			ctxt.divisionName = getDivisionName(formData.division);
 			ctxt.divisionID = formData.division;
+			ctxt.divisionColor = getDivisionColor(formData.division);
 			ctxt.phone = formData.phone ? '+36 ' + formData.phone : null;
 			return {
 				context: ctxt,

@@ -108,28 +108,30 @@
             </td>
           </tr>
           <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 5px;">
-              <span class="div-{{divisionID}}">Artificial Group//{{divisionName}}</span>
+            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
+              <span style="color:{{divisionColor}};">Artificial Group//{{divisionName}}</span>
             </td>
           </tr>
+          {{#if phone}}
           <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 5px;">
+            <td width="480" style="width:480px;margin:0;padding:0;padding-bottom: 4px;">
               {{phone}}
+            </td>
+          </tr>
+          {{/if}}
+          <tr>
+            <td width="480" style="width:480px;margin:0;padding:0;">
+              <a style="color:#3c3c3c;" href="http://{{siteUrl}}">{{siteUrl}}</a>
             </td>
           </tr>
           <tr>
             <td width="480" style="width:480px;margin:0;padding:0;">
-              <a style="color:#3c3c3c; line-height:15px" href="http://{{siteUrl}}">{{siteUrl}}</a>
-            </td>
-          </tr>
-          <tr>
-            <td width="480" style="width:480px;margin:0;padding:0;line-height:15px">
               Budapest, 1053 Veres Pálné utca 9.
             </td>
           </tr>
           <tr>
-            <td width="480" style="width:480px;margin:0;padding:0; padding-top:7px;">
-              <img src="http://www.artificialdigital.com/email/artificial-sig-{{divisionID}}.jpg" alt="">
+            <td width="480" style="width:480px;margin:0;padding:0; padding-top:6px;">
+              <img src="http://www.artificialdigital.com/email/artificial-sig-{{divisionID}}.jpg" width="480" height="64" alt="">
             </td>
           </tr>
         </tbody>
