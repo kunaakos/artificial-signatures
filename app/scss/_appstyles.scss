@@ -4,21 +4,49 @@ body {
   background: #cacaca;
 }
 
+.sect-title {
+  background: #f9f9f9;
+
+}
+
 #title {
-  color: white;
+  // color: white;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: bold;
-  // font-size: 60px;
   margin-bottom: 40px;
   margin-top: 25px;
 }
 
-.top-half {
+.sect-form {
+  background: #f9f9f9;
+  padding: 50px 0;
 }
 
-.bottom-half {
-  margin-top: 50px;
+.sect-signature {
   background: white;
   padding: 50px 0;
+}
+
+
+// template styles
+#target {
+  .div-boutique {
+    color:  rgb(20,156,134);
+  }
+
+  .div-craft {
+    color:  rgb(209,127,36);
+  }
+
+  .div-event {
+    color:  rgb(58,127,182);
+  }
+
+  .div-digital {
+    color:  rgb(218,83,64);
+  }
+  p {
+    margin:0;
+  }
 }

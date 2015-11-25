@@ -6779,15 +6779,35 @@ th.hide-for-touch {
 body {
   background: #cacaca; }
 
+.sect-title {
+  background: #f9f9f9; }
+
 #title {
-  color: white;
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: bold;
   margin-bottom: 40px;
   margin-top: 25px; }
 
-.bottom-half {
-  margin-top: 50px;
+.sect-form {
+  background: #f9f9f9;
+  padding: 50px 0; }
+
+.sect-signature {
   background: white;
   padding: 50px 0; }
+
+#target .div-boutique {
+  color: #149c86; }
+
+#target .div-craft {
+  color: #d17f24; }
+
+#target .div-event {
+  color: #3a7fb6; }
+
+#target .div-digital {
+  color: #da5340; }
+
+#target p {
+  margin: 0; }
