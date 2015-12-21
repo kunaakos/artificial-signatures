@@ -1,3 +1,3 @@
-## zf5_project
+## artificial-signatures
 
-(place your readme here)
+Email signature generator for Artificial Group.

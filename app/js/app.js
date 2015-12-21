@@ -115,12 +115,15 @@ var setTemplate = function (templateName) {
 			$('#hidden-link').click();
 		};
 
-
-
 // start
 $("#title").fitText(1.3);
 $("#phone-input").mask("99 999 9999",{placeholder:" ", autoclear: false});
 $(document).foundation();
+
+if (!Modernizr.adownload) {
+  $(#btn-save).addClass('no-show');
+}
+
 updateForm();
 
 // refresh template after every keystroke
@@ -143,10 +146,3 @@ $("#division-select").on('change', function() {
 	setDivision(this.value);
 	updateForm();
 });
-
-// $("#phone-input").on('keyup', function() {
-// 	var number = $(this).val();
-//   number = number.replace(/\s+/g, '').replace(/(\d{2})(\d{3})(\d{4})/, "$1 $2 $3");
-//   $(this).val(number);
-// 	updateForm();
-// });
